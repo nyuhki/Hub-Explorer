@@ -7,7 +7,8 @@ Each GCN was applied to gene ontology (GO) analysis iteratively using goatools74
 3. Similarity-based K-means clustering for core regulatory hub identification:
 The Jaccard Similarity Index was calculated as described below for evaluating similarity among targets according to the significant hub components:
 Jaccard Similarity Index (target A,target B)=  (|target A ∩ target B|)/(|target A ∪ target B|)
-Finally, the Python sklearn.cluster.KMeans function86 was utilized to cluster the targets according to the Jaccard Similarity Index, and the overlapped hub components were extracted as the core regulatory hub. As a benchmark for the K-means method, a dendrogram-based clustering was conducted and labeled on the Jaccard Similarity Index-based clustermap by the Python seaborn.clustermap function.
+Finally, the Python sklearn.cluster.KMeans function86 was utilized to cluster the targets according to the Jaccard Similarity Index, and the overlapped hub components were extracted as the core regulatory hub. As a benchmark for the K-means method, a dendrogram-based clustering was conducted and labeled on the Jaccard Similarity Index-based clustermap by the Python seaborn.clustermap function.\
+
 Usage):
   sh Hub-Explorer.sh \
     -s human / mouse (Select species)\
@@ -15,7 +16,8 @@ Usage):
     -l list_file (columns=[Symbol])\
     -c list_column (Symbol)\
     -a annotation_table (columns=[Symbol, Uniprot ID])\
-    -k n_cluster for k-means mathod (ex. 4)
+    -k n_cluster for k-means mathod (ex. 4) \
+    
 Dependencies): \
 -Python 3.8.12 \
 -goatools v1.2.4 \
@@ -24,7 +26,8 @@ Dependencies): \
 -Pandas v1.5.3 \
 -Seaborn v0.12.1 \
 -Scikit-learn v0.0.post1 \
--Scipy v1.8.0 
+-Scipy v1.8.0  \
+
 Refereces): \
 1.Klopfenstein, D.V., Zhang, L., Pedersen, B.S., Ramírez, F., Warwick Vesztrocy, A., Naldi, A., Mungall, C.J., Yunes, J.M., Botvinnik, O.B., Weigel, M., et al. GOATOOLS: A Python library for Gene Ontology analyses. Scientific Reports. 2018; 8: 10872. 10.1038/s41598-018-28948-z \
 2.Hunter, J.D. Matplotlib: A 2D Graphics Environment. Computing in Science & Engineering. 2007; 9: 90-95. 10.1109/MCSE.2007.55. \
