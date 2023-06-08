@@ -9,7 +9,7 @@ The Jaccard Similarity Index was calculated as described below for evaluating si
 Jaccard Similarity Index (target A,target B)=  (|target A ∩ target B|)/(|target A ∪ target B|)
 Finally, the Python sklearn.cluster.KMeans function was utilized to cluster the targets according to the Jaccard Similarity Index, and the overlapped hub components were extracted as the core regulatory hub. As a benchmark for the K-means method, a dendrogram-based clustering was conducted and labeled on the Jaccard Similarity Index-based clustermap by the Python seaborn.clustermap function.
 
-Usage):
+Usage): \
   sh Hub-Explorer.sh \
     -s human / mouse (Select species)\
     -m matrix_file (ex. Expression matrix (values=expression, index=["genes"], columns=["cell types"])\
@@ -18,7 +18,7 @@ Usage):
     -a annotation_table (columns=["Symbol", "Uniprot ID"])\
     -k number of cluster for K-means method (ex. k=4)
     
-Dependencies):
+Dependencies): \
   -Python 3.8.12 \
   -goatools v1.2.4 \
   -Matplotlib v 3.7.0 \
